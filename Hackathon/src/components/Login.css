@@ -1,0 +1,102 @@
+.body{
+    background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://cdn.dribbble.com/userupload/15019253/file/original-ca1488d7728177f487f1d52bb1f3c02f.png?resize=1200x900");
+    background-size: cover;
+}
+
+.login-container {
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    transition: all;
+}
+
+.login-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #388e3c; /* Green shade */
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #388e3c;
+}
+
+button {
+    background-color: #388e3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.signup {
+    margin-top: 15px;
+    color: #555;
+}
+
+.signup a {
+    color: #388e3c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Add animation when hovering over the container */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.login-container:hover {
+    animation: floating 3s infinite ease-in-out;
+}

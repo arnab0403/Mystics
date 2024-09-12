@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      text-align: center;
+    }
+    textarea {
+      width: 80%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ask ChatGPT</h1>
+  <textarea id="question" placeholder="Type your question here..."></textarea>
+  <br>
+  <button onclick="askChatGPT()">Ask</button>
+
+  <div id="response"></div>
+
+  <script>
+    async function askChatGPT() {
+      const question = document.getElementById('question').value;
+
+      const response = await fetch('http://localhost:3000/ask', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question }),
+      });
+
+      const data = await response.json();
+      document.getElementById('response').innerText = data.answer;
+    }
+  </script>
+</body>
+</html>

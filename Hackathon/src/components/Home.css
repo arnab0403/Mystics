@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .main{
+    background-image: url("https://cdn.dribbble.com/userupload/15019253/file/original-ca1488d7728177f487f1d52bb1f3c02f.png?resize=1200x900");
+    background-size: cover;
+    height: 100vh;
+  }
